@@ -2,7 +2,8 @@ package net.microfalx.threadpool;
 
 import net.microfalx.lang.ClassUtils;
 import net.microfalx.lang.ThreadUtils;
-import net.microfalx.lang.service.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.time.ZonedDateTime;
@@ -29,7 +30,7 @@ import static net.microfalx.threadpool.ThreadPoolUtils.getThreadPoolId;
  */
 final class ThreadPoolImpl extends AbstractExecutorService implements ThreadPool {
 
-    final static Logger LOGGER = Logger.get(ThreadPoolImpl.class);
+    final static Logger LOGGER = LoggerFactory.getLogger(ThreadPoolImpl.class);
 
     private final static Duration INITIAL_DELAY = Duration.ofSeconds(30);
     private final static boolean NO_INITIAL_DELAY = Boolean.getBoolean("thread.pool.no_initial_delay");

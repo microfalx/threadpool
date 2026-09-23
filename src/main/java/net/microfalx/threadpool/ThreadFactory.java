@@ -1,6 +1,7 @@
 package net.microfalx.threadpool;
 
-import net.microfalx.lang.service.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.Map;
@@ -12,7 +13,7 @@ import static net.microfalx.lang.ArgumentUtils.requireNonNull;
 
 class ThreadFactory implements java.util.concurrent.ThreadFactory {
 
-    private final static Logger LOGGER = Logger.get(ThreadFactory.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(ThreadFactory.class);
 
     private final String namePrefix;
     private final Map<Thread, Integer> indexesByThread = new ConcurrentHashMap<>();

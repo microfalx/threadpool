@@ -1,6 +1,7 @@
 package net.microfalx.threadpool;
 
-import net.microfalx.lang.service.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -14,7 +15,7 @@ import static net.microfalx.threadpool.ThreadPoolUtils.getThreadPoolId;
 
 class Dispatcher {
 
-    private static final Logger LOGGER = Logger.get(Dispatcher.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Dispatcher.class);
 
     private static final long STALE_THREAD_INTERVAL = 5_000_000_000L;
     private static final long MAX_WAIT_BETWEEN_ITERATIONS = 10;

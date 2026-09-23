@@ -1,14 +1,15 @@
 package net.microfalx.threadpool;
 
 import net.microfalx.lang.ClassUtils;
-import net.microfalx.lang.service.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The default handler (unless the thread pool provides one).
  */
 public class DefaultFailedHandler implements ThreadPool.FailedHandler {
 
-    static final Logger LOGGER = Logger.get(DefaultFailedHandler.class);
+    static final Logger LOGGER = LoggerFactory.getLogger(DefaultFailedHandler.class);
 
     @Override
     public void failed(ThreadPool pool, Thread thread, Throwable throwable, Object task) {
