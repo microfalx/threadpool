@@ -65,7 +65,7 @@
 
     <properties>
         <bom.version>1.0.25</bom.version>
-        <lang.version>1.0.6-SNAPSHOT</lang.version>
+        <lang.version>1.0.7-SNAPSHOT</lang.version>
         <metrics.version>1.0.3-SNAPSHOT</metrics.version>
     </properties>
 
